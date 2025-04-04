@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace CRUD_Application
@@ -20,19 +19,9 @@ namespace CRUD_Application
         {
             SqlDataSource1.InsertParameters["name"].DefaultValue = ((TextBox)GridView1.FooterRow.FindControl("nameTextBox")).Text;
             SqlDataSource1.InsertParameters["gender"].DefaultValue = ((DropDownList)GridView1.FooterRow.FindControl("genderListNew")).SelectedValue;
-            SqlDataSource1.SelectParameters["class"].DefaultValue = ((TextBox)GridView1.FooterRow.FindControl("classTextBox")).Text;
+            SqlDataSource1.InsertParameters["class"].DefaultValue = ((TextBox)GridView1.FooterRow.FindControl("classTextBox")).Text;
 
-            int isInserted = SqlDataSource1.Insert();
-
-            if (isInserted > 0)
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('New Item Created!')</script>");
-            }
-            else
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "scripts", "<script>alert('Insertion failed. Try again!')</script>");
-
-            }
+            SqlDataSource1.Insert();
         }
     }
 }
