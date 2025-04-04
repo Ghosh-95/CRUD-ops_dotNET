@@ -68,9 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationOne.aspx" />
+    <Content Include="Application_Repeater-Control.aspx" />
     <Content Include="App_Data\MyLocalDB.mdf" />
     <Content Include="App_Data\MyLocalDB_log.ldf">
       <DependentUpon>MyLocalDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Repeater_DB.mdf" />
+    <Content Include="App_Data\Repeater_DB_log.ldf">
+      <DependentUpon>Repeater_DB.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -82,6 +87,13 @@
     </Compile>
     <Compile Include="ApplicationOne.aspx.designer.cs">
       <DependentUpon>ApplicationOne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Application_Repeater-Control.aspx.cs">
+      <DependentUpon>Application_Repeater-Control.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application_Repeater-Control.aspx.designer.cs">
+      <DependentUpon>Application_Repeater-Control.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
